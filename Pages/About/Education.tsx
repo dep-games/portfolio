@@ -3,12 +3,10 @@ import React from "react";
 import {
   Card,
   CardContent,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 
-import { format } from "date-fns";
 import { motion } from "framer-motion";
 import { SchoolIcon } from "lucide-react";
 
@@ -22,8 +20,6 @@ type Education = {
     en: string;
     es: string;
   };
-  yearStart: Date;
-  yearEnd?: Date;
 };
 const variants = {
   visible: (i: number) => ({
@@ -56,31 +52,32 @@ export default function Education({
       },
       place: "Universidad Politécnica de Aguascalientes",
       description: {
-        en: "Currently in the 6th quarter. The program focuses on designing, developing, and implementing information systems in organizations, applying information and communication technologies to ensure efficiency in productive processes.",
-        es: "Actualmente cursando el 6° cuatrimestre. La carrera se enfoca en el diseño, desarrollo e implementación de sistemas informáticos en las organizaciones, aplicando tecnologías de información y comunicaciones para asegurar la eficiencia en los procesos productivos.",
+        en: "A program covering the full software development lifecycle: structured and object-oriented programming, web and mobile applications, databases, computer networks, artificial intelligence, data science, and information security, reinforced by an integrative project each term.",
+        es: "Un programa que abarcó todo el ciclo de desarrollo de software: programación estructurada y orientada a objetos, aplicaciones web y móviles, bases de datos, redes de cómputo, inteligencia artificial, ciencia de datos y seguridad informática, reforzado con un proyecto integrador en cada cuatrimestre.",
       },
-      yearStart: new Date(2022, 8, 14),
-      //yearEnd: new Date(2025, 11, 5),
     },
     {
       title: {
         en: "Technical Degree in Programming",
         es: "Técnico en Programación",
       },
-      place: "CECyTEJ 10, Plantel Encarnación de Díaz",
+      place: "CECyTEJ 10",
       description: {
         en: "High school program with a technical specialization in programming, including courses in programming languages, web development, database management, and computer maintenance.",
         es: "Programa de preparatoria con especialización técnica en programación, que incluyó cursos de lenguajes de programación, desarrollo web, gestión de bases de datos y mantenimiento de computadoras.",
       },
-      yearStart: new Date(2017, 7, 13),
-      yearEnd: new Date(2020, 6, 3),
     },
   ];
 
   return (
-    <section className="grid relative gap-4 after:w-1 after:h-full after:absolute dark:after:bg-white after:bg-black after:right-0 after:z-0">
-      <h2 className="text-fs-600 font-bold">{title}</h2>
-      <div className="grid gap-4 relative">
+    <section className="grid relative gap-4">
+      <div className="flex items-center gap-3">
+        <span className="grid place-items-center rounded-full bg-gold/15 text-gold p-2">
+          <SchoolIcon className="w-5 h-5" />
+        </span>
+        <h2 className="text-fs-500 font-bold">{title}</h2>
+      </div>
+      <div className="grid gap-6">
         {educations.map((education, i) => (
           <motion.article
             aria-description="styling element"
@@ -90,30 +87,27 @@ export default function Education({
             whileInView={"visible"}
             viewport={{ once: true, amount: 0.25 }}
             key={i}
-            className="relative mr-8 inline"
+            className="flex items-stretch gap-4"
           >
-            <Card className="backdrop-blur-xs bg-opacity-60 dark:bg-opacity-60 flex flex-col">
+            <Card className="flex-1 backdrop-blur-xs bg-opacity-90 dark:bg-opacity-90 flex flex-col border-t-2 border-t-gold/40 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:border-gold/70">
               <CardHeader>
                 <CardTitle>{education.title[locale as "en" | "es"]}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="font-bold fs-300">{education.place}</p>
+                <p className="font-bold text-gold fs-300">{education.place}</p>
                 <p className="fs-300">
                   {education.description[locale as "en" | "es"]}
                 </p>
               </CardContent>
-              <CardFooter className="mt-auto">
-                <time className="fs-300">
-                  {format(education.yearStart, "dd.MM.yyyy")} -{" "}
-                  {education.yearEnd
-                    ? format(education?.yearEnd, "dd.MM.yyyy")
-                    : locale === "es" ? "Presente" : "Present"}
-                </time>
-              </CardFooter>
             </Card>
-            <figure className="absolute -right-14 top-0 z-50 bg-gray-200 dark:bg-gray-600 rounded-full p-2">
-              <SchoolIcon className="w-8 h-8" />
-            </figure>
+            <div className="flex flex-col items-center shrink-0 w-8">
+              <span className="grid place-items-center rounded-full bg-gold/15 text-gold p-1.5 shrink-0">
+                <SchoolIcon className="w-5 h-5" />
+              </span>
+              {i !== educations.length - 1 && (
+                <span className="w-0.5 flex-1 bg-gold/30 mt-2 rounded-full" />
+              )}
+            </div>
           </motion.article>
         ))}
       </div>

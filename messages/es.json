@@ -11,7 +11,7 @@
   },
   "Home": {
     "title": "¡Hola Mundo, Soy Daniel!",
-    "subtitle": "Soy un estudiante de Ingeniería en Sistemas Computacionales.",
+    "subtitle": "Soy Ingeniero en Sistemas Computacionales.",
     "projects": "Ver mis proyectos"
   },
   "Projects": {
@@ -50,7 +50,7 @@
     },
     "adventure": {
       "title": "Un poco sobre mi",
-      "p1": "Hola, soy Daniel, estudiante de Ingeniería en Sistemas Computacionales en la Universidad Politécnica de Aguascalientes. Mi pasión por la programación comenzó en la preparatoria, donde descubrí el mundo del código.",
+      "p1": "Hola, soy Daniel, Ingeniero en Sistemas Computacionales egresado de la Universidad Politécnica de Aguascalientes. Mi pasión por la programación comenzó en la preparatoria, donde descubrí el mundo del código.",
       "p2": "Cuando no estoy programando, me encontrarás disfrutando de la música, siempre explorando nuevos géneros y artistas. También me encanta la libertad de andar en bicicleta, recorriendo caminos y descubriendo nuevos lugares.",
       "p3": "Mi curiosidad y entusiasmo por la tecnología me impulsan a seguir aprendiendo y creciendo en este emocionante campo. ¡Siempre estoy en busca de nuevos desafíos y oportunidades para innovar!"
     },

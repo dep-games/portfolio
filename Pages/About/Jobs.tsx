@@ -8,9 +8,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { format } from "date-fns";
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
+import { formatDuration } from "@/lib/duration";
 
 type Job = {
   title: {
@@ -22,8 +22,7 @@ type Job = {
     en: string;
     es: string;
   };
-  yearStart: Date;
-  yearEnd?: Date;
+  durationMonths: number;
 };
 const variants = {
   visible: (i: number) => ({
@@ -53,13 +52,24 @@ export default function Education({
         en: "Developer",
         es: "Programador",
       },
+      place: "Hecort Manufactura",
+      description: {
+        en: "Developed an internal project tracking tool that let the team manage tasks, log issues, and monitor time spent on each project. I also built an IoT monitoring system for industrial machines, using smart sensors with Bluetooth connectivity to detect anomalies in real time, helping the team log incidents early and prevent equipment failures.",
+        es: "Desarrollé una herramienta interna de seguimiento de proyectos que permitía al equipo administrar tareas, registrar incidencias y monitorear el tiempo invertido en cada proyecto. También construí un sistema IoT de monitoreo para maquinaria industrial, con sensores inteligentes y conectividad Bluetooth para detectar anomalías en tiempo real, ayudando al equipo a registrar incidencias a tiempo y prevenir fallos en el equipo.",
+      },
+      durationMonths: 19,
+    },
+    {
+      title: {
+        en: "Developer",
+        es: "Programador",
+      },
       place: "MegaPCs",
       description: {
         en: "Developed a multiplatform system for managing computer equipment, with features for adding images, printing receipts, and supporting multiple employees.",
         es: "Desarrollé un sistema multiplataforma para gestionar equipos de cómputo, con funcionalidades para agregar imágenes, imprimir recibos y soportar múltiples empleados.",
       },
-      yearStart: new Date(2024, 0, 3),
-      yearEnd: new Date(2024, 4, 25),
+      durationMonths: 6,
     },
     {
       title: {
@@ -71,14 +81,18 @@ export default function Education({
         en: "Performed hardware and software maintenance, installed operating systems and Office, and cleaned printers.",
         es: "Realicé mantenimiento y limpieza de hardware y software, instalación de sistemas operativos y Office, y limpieza de impresoras.",
       },
-      yearStart: new Date(2023, 1, 6),
-      yearEnd: new Date(2023, 11, 23),
+      durationMonths: 12,
     },
   ];
   return (
-    <section className="grid relative gap-4 after:w-1 after:h-full after:absolute dark:after:bg-white after:bg-black after:right-0 after:z-0">
-      <h2 className="text-fs-600 font-bold">{title}</h2>
-      <div className="grid gap-4 relative">
+    <section className="grid relative gap-4">
+      <div className="flex items-center gap-3">
+        <span className="grid place-items-center rounded-full bg-gold/15 text-gold p-2">
+          <Briefcase className="w-5 h-5" />
+        </span>
+        <h2 className="text-fs-500 font-bold">{title}</h2>
+      </div>
+      <div className="grid gap-6">
         {jobs.map((job, i) => (
           <motion.article
             aria-description="styling element"
@@ -88,30 +102,32 @@ export default function Education({
             whileInView={"visible"}
             viewport={{ once: true, amount: 0.25 }}
             key={i}
-            className="relative mr-8 inline"
+            className="flex items-stretch gap-4"
           >
-            <Card className="backdrop-blur-xs bg-opacity-60 dark:bg-opacity-60 flex flex-col">
+            <Card className="flex-1 backdrop-blur-xs bg-opacity-90 dark:bg-opacity-90 flex flex-col border-t-2 border-t-gold/40 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:border-gold/70">
               <CardHeader>
                 <CardTitle>{job.title[locale as "en" | "es"]}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="font-bold fs-300">{job.place}</p>
+                <p className="font-bold text-gold fs-300">{job.place}</p>
                 <p className="fs-300">
                   {job.description[locale as "en" | "es"]}
                 </p>
               </CardContent>
               <CardFooter className="mt-auto">
-                <time className="fs-300">
-                  {format(job.yearStart, "dd.MM.yyyy")} -{" "}
-                  {job.yearEnd
-                    ? format(job?.yearEnd, "dd.MM.yyyy")
-                    : "Present"}
+                <time className="inline-flex w-fit items-center rounded-full bg-gold/10 text-gold text-fs-100 font-semibold px-3 py-1">
+                  {formatDuration(job.durationMonths, locale as "en" | "es")}
                 </time>
               </CardFooter>
             </Card>
-            <figure className="absolute -right-14 top-0 z-50 bg-gray-200 dark:bg-gray-600 rounded-full p-2">
-              <Briefcase className="w-8 h-8" />
-            </figure>
+            <div className="flex flex-col items-center shrink-0 w-8">
+              <span className="grid place-items-center rounded-full bg-gold/15 text-gold p-1.5 shrink-0">
+                <Briefcase className="w-5 h-5" />
+              </span>
+              {i !== jobs.length - 1 && (
+                <span className="w-0.5 flex-1 bg-gold/30 mt-2 rounded-full" />
+              )}
+            </div>
           </motion.article>
         ))}
       </div>
