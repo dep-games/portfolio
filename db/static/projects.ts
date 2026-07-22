@@ -1,6 +1,60 @@
 const projects: Project[] = [
   {
     title: {
+      en: "LogHub - Centralized Logging Service",
+      es: "LogHub - Servicio Centralizado de Logs",
+    },
+    endpoint: "loghub",
+    images: [
+      {
+        src: "/pics/projects/loghub/1.png",
+        alt: "LogHub login screen",
+      },
+      {
+        src: "/pics/projects/loghub/2.png",
+        alt: "Analytics dashboard with event metrics and charts",
+      },
+      {
+        src: "/pics/projects/loghub/3.png",
+        alt: "Detailed event trace view",
+      },
+    ],
+    description: {
+      en: "LogHub is a centralized logging and observability service built to collect and audit events from multiple internal microservices in one place. Its dashboard shows overall metrics (total events, success rate, error breakdown, average response time) and lets you drill into any individual event to see its endpoint, status code, client IP, user agent, and a full step-by-step trace of what happened inside the request.\n\nEvents are ingested asynchronously through RabbitMQ and processed by a Python worker that persists them in PostgreSQL, while a FastAPI backend serves the data to a React/TypeScript frontend. Services across the ecosystem emit logs through a custom internal library, keeping every event's format consistent. The whole stack is containerized with Docker.",
+      es: "LogHub es un servicio centralizado de logging y observabilidad, construido para recolectar y auditar eventos de varios microservicios internos en un solo lugar. Su dashboard muestra métricas generales (total de eventos, tasa de éxito, desglose de errores, tiempo de respuesta promedio) y permite entrar al detalle de cualquier evento para ver su endpoint, código de estado, IP del cliente, user agent, y una traza completa paso a paso de lo que ocurrió dentro de la solicitud.\n\nLos eventos se reciben de forma asíncrona a través de RabbitMQ y son procesados por un worker en Python que los persiste en PostgreSQL, mientras que un backend en FastAPI expone los datos a un frontend en React/TypeScript. Los servicios del ecosistema emiten sus logs a través de una librería interna propia, manteniendo un formato consistente en cada evento. Todo el stack está contenedorizado con Docker.",
+    },
+    repoLink: "",
+    demoLink: "",
+    status: "completed",
+    techStack: [
+      {
+        name: "React",
+        url: "https://react.dev/",
+      },
+      {
+        name: "TypeScript",
+        url: "https://www.typescriptlang.org/",
+      },
+      {
+        name: "FastAPI",
+        url: "https://fastapi.tiangolo.com/",
+      },
+      {
+        name: "PostgreSQL",
+        url: "https://www.postgresql.org/",
+      },
+      {
+        name: "RabbitMQ",
+        url: "https://www.rabbitmq.com/",
+      },
+      {
+        name: "Docker",
+        url: "https://www.docker.com/",
+      },
+    ],
+  },
+  {
+    title: {
       en: "Innaly - Hotel Management System",
       es: "Innaly - Sistema de Gestión Hotelera",
     },
