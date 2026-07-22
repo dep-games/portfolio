@@ -58,7 +58,7 @@ export default async function Project({
   const t = await getTranslations("Project");
   const blurredImage = await getBase64(project.images[0].src);
   return (
-    <section className="max-w-5xl mx-auto p-4 z-20 mb-auto">
+    <section className="max-w-6xl mx-auto px-6 sm:px-12 lg:px-20 my-4 sm:my-12 z-20 mb-auto relative">
       <ProjectCard
         project={project}
         blurredImage={blurredImage}
