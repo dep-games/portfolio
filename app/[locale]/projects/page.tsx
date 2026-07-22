@@ -48,16 +48,18 @@ export default async function Projects({
     alt: project.images[0].alt,
     endpoint: project.endpoint,
     description: project.description[locale as "en" | "es"],
+    techStack: project.techStack,
+    status: project.status,
   }));
 
   return (
     <section className="mb-auto">
-      <h1 className="text-fs-700 text-center font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-red-700 to-purple-900 bg-300% animate-flow-gradient my-4">
+      <h1 className="text-fs-600 text-center font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary via-[#C9A84A] to-secondary bg-300% animate-flow-gradient my-4">
         {t("title")}
       </h1>
       <div
         aria-hidden
-        className="z-10 p-2 my-4 sm:my-16 lg:w-10/12 mx-auto grid md:grid-cols-1 lg:grid-cols-2 gap-8"
+        className="z-10 px-6 sm:px-12 lg:px-24 my-4 sm:my-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         {projectPreviewData.map((project, index) => (
           <ProjectCards

@@ -59,6 +59,8 @@ type ProjectPreview = {
   alt: string;
   endpoint: string;
   description: string;
+  techStack: TechStack[];
+  status: Project["status"];
 };
 
 type Year = {
