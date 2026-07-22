@@ -1,6 +1,100 @@
 const projects: Project[] = [
   {
     title: {
+      en: "Bluesensor - Industrial IoT Monitoring Platform",
+      es: "Bluesensor - Plataforma de Monitoreo IoT Industrial",
+    },
+    endpoint: "bluesensor",
+    images: [
+      {
+        src: "/pics/projects/bluesensor/1.png",
+        alt: "Marketing landing page",
+      },
+      {
+        src: "/pics/projects/bluesensor/2.png",
+        alt: "Login screen",
+      },
+      {
+        src: "/pics/projects/bluesensor/3.png",
+        alt: "Company dashboard overview",
+      },
+      {
+        src: "/pics/projects/bluesensor/4.png",
+        alt: "Machines list with assigned sensors",
+      },
+      {
+        src: "/pics/projects/bluesensor/5.png",
+        alt: "Gateways list",
+      },
+      {
+        src: "/pics/projects/bluesensor/6.png",
+        alt: "Active alerts list",
+      },
+      {
+        src: "/pics/projects/bluesensor/7.png",
+        alt: "Alert detail with exceeded thresholds and charts",
+      },
+      {
+        src: "/pics/projects/bluesensor/8.png",
+        alt: "Machine detail page with sensor information",
+      },
+      {
+        src: "/pics/projects/bluesensor/9.png",
+        alt: "Gateway detail page, disconnected state",
+      },
+      {
+        src: "/pics/projects/bluesensor/10.png",
+        alt: "Gateway detail page with a connected, live sensor",
+      },
+      {
+        src: "/pics/projects/bluesensor/11.png",
+        alt: "Live monitoring view with real-time metrics",
+      },
+      {
+        src: "/pics/projects/bluesensor/12.png",
+        alt: "Expanded vibration velocity chart",
+      },
+      {
+        src: "/pics/projects/bluesensor/13.png",
+        alt: "Machine detail page, light theme",
+      },
+    ],
+    description: {
+      en: "Bluesensor is an industrial IoT platform for real-time vibration and temperature monitoring of manufacturing equipment. Organizations register their machines and attach wireless vibration sensors to them through gateway devices, getting a live view of velocity, displacement, frequency, and angle per axis (X/Y/Z), plus temperature, with configurable thresholds that trigger an alert as soon as a machine's readings drift outside its normal range.\n\nEach alert records exactly which measurements exceeded their threshold and keeps a live chart of the period around the event, so an operator can inspect what happened and resolve it once addressed. Machines also go through a short calibration period before alerting is enabled, so thresholds come from real baseline data instead of guesswork.\n\nThe frontend is a React/TypeScript dashboard backed by a FastAPI service and PostgreSQL. Sensors connect over Bluetooth to WiFi/Bluetooth gateway controllers, which relay the readings to the backend in real time over MQTT, with the whole stack running in Docker containers.",
+      es: "Bluesensor es una plataforma IoT industrial para el monitoreo en tiempo real de vibración y temperatura en maquinaria de manufactura. Las organizaciones registran sus máquinas y les asignan sensores inalámbricos de vibración a través de dispositivos gateway, obteniendo una vista en vivo de velocidad, desplazamiento, frecuencia y ángulo por eje (X/Y/Z), además de temperatura, con umbrales configurables que disparan una alerta en cuanto las lecturas de una máquina se salen de su rango normal.\n\nCada alerta registra exactamente qué mediciones excedieron su umbral y mantiene una gráfica en vivo del periodo alrededor del evento, para que un operador pueda revisar qué ocurrió y resolverla una vez atendida. Las máquinas también pasan por un periodo breve de calibración antes de activar las alertas, de modo que los umbrales se definen con datos reales de referencia y no a base de suposiciones.\n\nEl frontend es un dashboard en React/TypeScript respaldado por un servicio en FastAPI y PostgreSQL. Los sensores se conectan por Bluetooth a controladores gateway WiFi/Bluetooth, que retransmiten las lecturas al backend en tiempo real vía MQTT, con todo el stack corriendo en contenedores Docker.",
+    },
+    repoLink: "",
+    demoLink: "",
+    status: "completed",
+    techStack: [
+      {
+        name: "React",
+        url: "https://react.dev/",
+      },
+      {
+        name: "TypeScript",
+        url: "https://www.typescriptlang.org/",
+      },
+      {
+        name: "FastAPI",
+        url: "https://fastapi.tiangolo.com/",
+      },
+      {
+        name: "PostgreSQL",
+        url: "https://www.postgresql.org/",
+      },
+      {
+        name: "MQTT",
+        url: "https://mqtt.org/",
+      },
+      {
+        name: "Docker",
+        url: "https://www.docker.com/",
+      },
+    ],
+  },
+  {
+    title: {
       en: "LogHub - Centralized Logging Service",
       es: "LogHub - Servicio Centralizado de Logs",
     },
