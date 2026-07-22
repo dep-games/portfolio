@@ -6,7 +6,6 @@
     "home": "Inicio",
     "projects": "Proyectos",
     "about": "Sobre mí",
-    "guestbook": "Libro de visitas",
     "particles-disabled": "Desactivar partículas",
     "particles-enabled": "Activar partículas"
   },
@@ -48,17 +47,6 @@
     "metadata": {
       "title": "Sobre mí",
       "description": "Página sobre mí que contiene información de contacto y una breve biografía."
-    },
-    "GuestBook": {
-      "id": "guestbook",
-      "title": "Libro de Visitas",
-      "email": "No te preocupes, no compartiré tu correo electrónico con nadie.",
-      "signout": "Cerrar sesión",
-      "googleSignin": "Iniciar sesión con Google",
-      "githubSignin": "Iniciar sesión con GitHub",
-      "signing": "Iniciando sesión...",
-      "sign": "Firmar",
-      "placeholder": "Deja un mensaje..."
     },
     "adventure": {
       "title": "Un poco sobre mi",

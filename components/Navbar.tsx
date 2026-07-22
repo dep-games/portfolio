@@ -50,7 +50,6 @@ const item = {
 };
 export default function Navbar({
   about,
-  guestbook,
   home,
   particlesEnabled,
   partcilesDisabled,
@@ -59,7 +58,6 @@ export default function Navbar({
   home: string;
   projects: string;
   about: string;
-  guestbook: string;
   particlesEnabled: string;
   partcilesDisabled: string;
 }) {
