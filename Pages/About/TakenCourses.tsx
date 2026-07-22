@@ -42,7 +42,7 @@ export default function TakenCourses({
             }}
         >
             <CardHeader>
-                <h1 className='text-center  text-fs-600 font-bold'>
+                <h1 className='text-center  text-fs-500 font-bold'>
                     {title}
                 </h1>
             </CardHeader>

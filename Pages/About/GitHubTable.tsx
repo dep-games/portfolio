@@ -52,7 +52,7 @@ export default function GitHubTable({
       className="block backdrop-blur-xs bg-opacity-60 dark:bg-opacity-60"
     >
       <CardHeader>
-        <CardTitle className="text-fs-600 font-bold text-center">
+        <CardTitle className="text-fs-500 font-bold text-center">
           {title}
         </CardTitle>
       </CardHeader>

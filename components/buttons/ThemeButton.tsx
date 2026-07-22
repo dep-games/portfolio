@@ -17,9 +17,9 @@ export default function ThemeButton() {
           className="hidden lg:block"
         >
           {theme === "dark" ? (
-            <Sun aria-label="Sun Icon" size={26} />
+            <Sun aria-label="Sun Icon" size={20} />
           ) : (
-            <Moon aria-label="Moon Icon" size={26} />
+            <Moon aria-label="Moon Icon" size={20} />
           )}
         </GlowingButton>
         <Button
@@ -28,9 +28,9 @@ export default function ThemeButton() {
           variant="light"
         >
           {theme === "dark" ? (
-            <Sun aria-label="Sun Icon" size={26} />
+            <Sun aria-label="Sun Icon" size={20} />
           ) : (
-            <Moon aria-label="Moon Icon" size={26} />
+            <Moon aria-label="Moon Icon" size={20} />
           )}
         </Button>
       </>

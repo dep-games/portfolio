@@ -43,11 +43,11 @@ export const AboutMeParagraph = ({
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="my-4 text-fs-700 font-bold"
+        className="my-4 text-fs-600 font-bold"
       >
         {title}
       </motion.h1>
-      <section className="flex flex-col gap-4 text-fs-300">
+      <section className="flex flex-col gap-4 text-fs-300 leading-relaxed text-foreground/90">
         <motion.p
           variants={container}
           initial="hidden"

@@ -71,7 +71,7 @@ export default function Navbar({
   return (
     <NextUINavbar
       classNames={{
-        toggle: ["data-[open=true]:text-danger"],
+        toggle: ["data-[open=true]:text-primary"],
         menu: ["items-start"],
         menuItem: [
           "relative",
@@ -83,7 +83,7 @@ export default function Navbar({
           "data-[active=true]:after:bottom-0",
           "data-[active=true]:after:left-0",
           "data-[active=true]:after:bg-gradient-to-r",
-          "data-[active=true]:after:from-danger",
+          "data-[active=true]:after:from-primary",
           "data-[active=true]:after:to-secondary",
           "data-[active=true]:after:bg-300%",
           "data-[active=true]:after:animate-flow-gradient",
@@ -138,8 +138,8 @@ export default function Navbar({
           <motion.li variants={item} className="ml-auto">
             <Dropdown>
               <DropdownTrigger>
-                <Button className="min-w-max max-w-max p-4" variant="light">
-                  <Settings size={26} />
+                <Button className="min-w-max max-w-max p-2" variant="light">
+                  <Settings size={20} />
                 </Button>
               </DropdownTrigger>
               <DropdownMenu aria-label="site settings">
