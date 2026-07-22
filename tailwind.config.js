@@ -26,6 +26,9 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        gold: "#C9A84A",
+      },
       minHeight: {
         dscreen: "100dvh",
       },
@@ -117,17 +120,17 @@ module.exports = {
         dark: {
           colors: {
             primary: {
-              DEFAULT: "#57C6FF",
+              DEFAULT: "#4A5DB8",
             },
             secondary: {
-              DEFAULT: "#7D24FF",
-              foreground: "#0B1139",
+              DEFAULT: "#5B3A8E",
+              foreground: "#18181B",
             },
 
-            background: "#0B1139",
+            background: "#18181B",
             foreground: {
-              DEFAULT: "#FFFFFF",
-              foreground: "#24294c",
+              DEFAULT: "#EDEAE2",
+              foreground: "#26262B",
             },
           },
         },

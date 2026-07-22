@@ -34,13 +34,13 @@ export default function Home({
     >
       <motion.h1
         variants={item}
-        className="text-fs-700 lg:text-fs-900 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-red-700 to-purple-900 bg-300% animate-flow-gradient"
+        className="text-fs-700 lg:text-fs-900 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary via-[#C9A84A] to-secondary bg-300% animate-flow-gradient"
       >
         {title}
       </motion.h1>
       <motion.h2
         variants={item}
-        className="text-fs-500 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-red-700 to-purple-900 bg-300% animate-flow-gradient"
+        className="text-fs-500 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary via-[#C9A84A] to-secondary bg-300% animate-flow-gradient"
       >
         {subtitle}
       </motion.h2>
@@ -51,7 +51,7 @@ export default function Home({
         <TechIcons />
       </motion.figure>
       <MotionedLink
-        className="md:hidden text-fs-400 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-red-700 to-purple-900 bg-300% animate-flow-gradient pointer-events-auto"
+        className="md:hidden text-fs-400 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary via-[#C9A84A] to-secondary bg-300% animate-flow-gradient pointer-events-auto"
         variants={item}
         href={"/projects"}
       >

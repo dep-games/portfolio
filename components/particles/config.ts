@@ -17,7 +17,7 @@ const particlesConfig: ISourceOptions = {
       },
     },
     color: {
-      value: ["c912ed", "00bfff", "22dd22", "ffd500", "ff8000", "ff2600"],
+      value: ["4A5DB8", "5B3A8E", "C9A84A", "8A93B8", "2E3358"],
     },
     shape: {
       type: "circle",
