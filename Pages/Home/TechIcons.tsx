@@ -2,11 +2,21 @@ import React from "react";
 import Image from "next/image";
 import dartIcon from "@/public/svgs/dart.svg";
 import flutterIcon from "@/public/svgs/flutter.svg";
-import cppIcon from "@/public/svgs/cpp.svg";
 import javaIcon from "@/public/svgs/java.svg";
 import pythonIcon from "@/public/svgs/python.svg";
-import htmlIcon from "@/public/svgs/html.svg";
-import cssIcon from "@/public/svgs/css.svg";
+
+const remoteIcons = [
+  { alt: "React Icon", slug: "react" },
+  { alt: "TypeScript Icon", slug: "ts" },
+  { alt: "Docker Icon", slug: "docker" },
+  { alt: "Node.js Icon", slug: "nodejs" },
+  { alt: "FastAPI Icon", slug: "fastapi" },
+  { alt: "PostgreSQL Icon", slug: "postgres" },
+  { alt: "C# Icon", slug: "cs" },
+  { alt: "MongoDB Icon", slug: "mongodb" },
+  { alt: "MySQL Icon", slug: "mysql" },
+  { alt: "Firebase Icon", slug: "firebase" },
+];
 
 export default function TechIcons() {
   return (
@@ -26,13 +36,6 @@ export default function TechIcons() {
         className="w-max-w w-full"
       />
       <Image
-        alt="C++ Icon"
-        src={cppIcon}
-        width={100}
-        height={100}
-        className="w-max-w w-full"
-      />
-      <Image
         alt="Java Icon"
         src={javaIcon}
         width={100}
@@ -46,20 +49,17 @@ export default function TechIcons() {
         height={100}
         className="w-max-w w-full"
       />
-      <Image
-        alt="HTML Icon"
-        src={htmlIcon}
-        width={100}
-        height={100}
-        className="w-max-w w-full"
-      />
-      <Image
-        alt="CSS Icon"
-        src={cssIcon}
-        width={100}
-        height={100}
-        className="w-max-w w-full"
-      />
+      {remoteIcons.map(({ alt, slug }) => (
+        <Image
+          key={slug}
+          alt={alt}
+          src={`https://skillicons.dev/icons?i=${slug}`}
+          width={100}
+          height={100}
+          className="w-max-w w-full"
+          unoptimized
+        />
+      ))}
     </>
   );
 }
