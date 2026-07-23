@@ -149,6 +149,52 @@ const projects: Project[] = [
   },
   {
     title: {
+      en: "Project Management Platform",
+      es: "Plataforma de Administración de Proyectos",
+    },
+    endpoint: "project-management-platform",
+    images: [
+      {
+        src: "/pics/projects/project-management/1.png",
+        alt: "Project overview page",
+      },
+      {
+        src: "/pics/projects/project-management/2.png",
+        alt: "Sprint overview with progress metrics",
+      },
+      {
+        src: "/pics/projects/project-management/3.png",
+        alt: "Kanban board (Canvas view)",
+      },
+    ],
+    description: {
+      en: "A full-featured project management platform for planning and tracking software projects end to end. Each project has an overview with progress, objectives, scope, and team, organized into sprints with their own Kanban board (To Do, In Progress, In Review, Done), task priorities, labels, and due dates.\n\nBeyond the board, each sprint includes a calendar, a timeline view, and reports, plus rich documentation pages (goals, features, tech stack, architecture) that can be exported to PDF or CSV. Built with React, TypeScript, Tailwind CSS, and Vite.",
+      es: "Una plataforma completa de administración de proyectos para planificar y dar seguimiento a proyectos de software de principio a fin. Cada proyecto tiene una vista general con progreso, objetivos, alcance y equipo, organizados en sprints con su propio tablero Kanban (Por Hacer, En Progreso, En Revisión, Completado), prioridades de tareas, etiquetas y fechas límite.\n\nAdemás del tablero, cada sprint incluye un calendario, una vista de cronograma y reportes, además de páginas de documentación completas (objetivos, características, stack tecnológico, arquitectura) que se pueden exportar a PDF o CSV. Construida con React, TypeScript, Tailwind CSS y Vite.",
+    },
+    repoLink: "",
+    demoLink: "",
+    status: "completed",
+    techStack: [
+      {
+        name: "React",
+        url: "https://react.dev/",
+      },
+      {
+        name: "TypeScript",
+        url: "https://www.typescriptlang.org/",
+      },
+      {
+        name: "Tailwind CSS",
+        url: "https://tailwindcss.com/",
+      },
+      {
+        name: "Vite",
+        url: "https://vitejs.dev/",
+      },
+    ],
+  },
+  {
+    title: {
       en: "Innaly - Hotel Management System",
       es: "Innaly - Sistema de Gestión Hotelera",
     },
