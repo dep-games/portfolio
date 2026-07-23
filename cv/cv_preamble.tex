@@ -1,0 +1,33 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{mathptmx}
+
+\definecolor{navy}{HTML}{1F4E79}
+\definecolor{accentline}{HTML}{3B76A8}
+
+\hypersetup{colorlinks=true, urlcolor=black}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\large\bfseries\color{navy}}
+  {}{0em}{}
+  [\textcolor{accentline}{\rule{\linewidth}{0.9pt}}]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+% ---- Reusable entry command: title, place, duration (optional), description
+\newcommand{\entry}[4]{%
+  \noindent\textbf{#1} \hfill \textit{\small\color{navy}#3}\\
+  \textit{#2}\\[2pt]
+  #4
+  \vspace{6pt}
+}
+
+\newcommand{\NAME}{Daniel Pedroza}
+\newcommand{\ROLE}{Computer Systems Engineer}
