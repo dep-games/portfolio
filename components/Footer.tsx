@@ -14,7 +14,7 @@ export default function Footer() {
         </span>
       </Link>
       <Link
-        href="mailto:danny.boy.developer@gmail.com"
+        href="mailto:daniel.pedroza.dev@gmail.com"
         className="hover:bg-gray-100 dark:hover:bg-black rounded-full p-2"
       >
         <Mail aria-label="Mail Icon" size={18} />
